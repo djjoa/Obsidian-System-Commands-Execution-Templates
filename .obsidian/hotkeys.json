@@ -1,0 +1,11 @@
+{
+  "templater-obsidian:TEMPLATES/Execute PowerShell5 Selected Text.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "1"
+    }
+  ]
+}

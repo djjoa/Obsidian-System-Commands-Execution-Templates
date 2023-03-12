@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "1b0a74a337dc32bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "29a1766ef7723bd0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9353b986f88ba232",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "88569b557936dd60",
+    "type": "split",
+    "children": [
+      {
+        "id": "b4c0e0b44a090aa5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5914aae5de2efca",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ba35d6eab2ad0fc2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e51e8f6466785fec",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9df4606d9e9dbc5f",
+    "type": "split",
+    "children": [
+      {
+        "id": "9514e6cc4fe57830",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "54525f7c1b493d00",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4836c7768fe83dc1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5532750709a44710",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f2c82eb4294aa303",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "9353b986f88ba232",
+  "lastOpenFiles": [
+    "Obsidian-System-Commands-Execution-Templates",
+    "attachments/Pasted image 20230312143001.png",
+    "attachments/Pasted image 20230312142213.png",
+    "README.md.md",
+    "attachments/Pasted image 20230312141836.png",
+    "ping example.md",
+    "attachments/ping_example_hotkey.gif",
+    "attachments/Pasted image 20230312140640.png",
+    "attachments/Pasted image 20230312140552.png",
+    "attachments/ping_example.gif",
+    "attachments/Pasted image 20230312113439.png",
+    "attachments",
+    "attachments/Pasted image 20230312132859.png.md",
+    "Pasted image 20230312132859.png",
+    "TEMPLATES/Execute cmd.exe Selected Text.md",
+    "TEMPLATES/Execute PowerShell5 Selected Text.md",
+    "TEMPLATES/Execute PowerShell7 Selected Text.md",
+    "attachments/Pasted image 20230312131658.png",
+    "TEMPLATES/Functions",
+    "TEMPLATES"
+  ]
+}

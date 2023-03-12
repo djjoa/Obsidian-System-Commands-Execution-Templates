@@ -1,0 +1,42 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "TEMPLATES",
+  "templates_pairs": [
+    [
+      "cmd_exec",
+      "cmd /C %Cmd%"
+    ],
+    [
+      "pwsh5_exec",
+      "PowerShell -NoProfile -Command Invoke-Expression(\"$Env:Pwsh\")"
+    ],
+    [
+      "pwsh7_exec",
+      "pwsh -NoProfile -Command Invoke-Expression(\"$Env:Pwsh\")"
+    ],
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": false,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": true,
+  "shell_path": "",
+  "user_scripts_folder": "TEMPLATES/Functions",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "enabled_templates_hotkeys": [
+    "TEMPLATES/Execute PowerShell5 Selected Text.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "enable_ribbon_icon": true
+}
