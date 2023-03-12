@@ -5,5 +5,5 @@
   "showUnsupportedFiles": true,
   "newLinkFormat": "absolute",
   "useMarkdownLinks": true,
-  "livePreview": false
+  "livePreview": true
 }

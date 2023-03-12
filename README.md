@@ -168,6 +168,49 @@ With the 3 template files added to the `TEMPLATES` directory we can now convert 
 
 Start to see how incredibly powerful this capability is, particularly with ingesting data into our PKMs. I run a substantial number of scripts during penetration testing whose output is eventually copy and paste into Obsidian. This functionality will significantly reduce the overhead by automating data ingestion into Obsidian. We can also execute local scripts in the same manor that might generate markdown formatted output, which in term would automatically format the note to our liking. 
 
+### Executing a PowerShell Script
+
+The following script is named "Get-ObsidianThings.ps1". It collects data about the computer and first registered ethernet card, then outputs content into a Markdown formatted table. 
+
+```powershell
+# Get-ObsidianThings.ps1
+# showcase how output can be formatted to markdown from within a script
+$HostName = $env:COMPUTERNAME
+$Accountname = $env:USERNAME
+$CMDPath = $env:ComSpec
+$OSType =  $env:OS
+
+$NetAdapter = Get-NetAdapter |Select-Object -First 1 | Select-Object DriverName, Name, DriverVersion
+
+$NetCardname = $NetAdapter.Name 
+$NetCardDriverPath = $NetAdapter.DriverName
+$NetCardDriverVer = $NetAdapter.DriverVersion
+
+
+# Format the markdown that will exist in note 
+
+"# System information" | Write-Output
+"## Computer information`n" | Write-Output
+"Host Name | User Name | CMD Path (Comspec) | OS Type" | Write-Output
+" --- | --- | --- | --- "| Write-Output
+"``$HostName``|``$Accountname``|``$CMDPath``|``$OSType```n" | Write-Output
+"## Network Adaper Informaiton`n"| Write-Output
+"Card Name | Driver Path | Driver Version"| Write-Output
+" --- | --- | --- "| Write-Output
+"``$NetCardname``|``$NetCardDriverPath``|``$NetCardDriverVer```n"| Write-Output
+"All values were produced from Get-ObsidianThings.ps1"| Write-Output
+```
+
+To invoke this script, type the script's full path and select the text as before before running the Templater PowerShell execution template.  **NOTE** when running on windows each backslash character `\` needs to be escaped with a second backslash or all slashes must be converted into forward slashes to run the command. 
+
+![](attachments/Pasted%20image%2020230312161834.png)
+
+Select the text and use the appropriate shell execution template to run the command. Output will be written directly into the note. 
+
+![](attachments/Pasted%20image%2020230312162144.png)
+The `ping` example was nice but this example showcases the potential of pre-emptively wrapping script output into markdown format, circumventing the need to copy and paste (and reformat) script output into our PKM systems. 
+
+
 ### Mapping Template Hotkeys 
 
 The execution templates can also be mapped to hot keys further reducing overhead. To map one of the shell executions to a hot key open `Templater settings > Template Hotkeys >` and add each shell to the hotkey of choice. 
