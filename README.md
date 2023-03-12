@@ -22,36 +22,36 @@ The following are requirements to grant Obsidian access to return output of syst
 ### Enabling Community Plugins 
 
 Open settings with `Ctrl+ ,` > `Community Plugins` > `Turn on Community Plugins`
-![[Pasted image 20230312113550.png]]
+![Pasted image 20230312113550.png](attachments/Pasted%20image%2020230312113550.png)
 
 Click `Browse`
-![[Pasted image 20230312113743.png]]
+![Pasted image 20230312113743.png](attachments/Pasted%20image%2020230312113743.png)
 
 Type `Templater` and select the plugin by `SilentVoid`. Click `Install` then `Enable`. 
 
-![[Pasted image 20230312113952.png]]
+![Pasted image 20230312113952.png](attachments/Pasted%20image%2020230312113952.png)
 
 
 ### Creating Template Folder 
 
 Create a template folder in your desired location within the vault. I chose the root of the vault because it's easier to navigate and create templates but the folder name or location doesn't matter. 
 
-![[Pasted image 20230312114222.png]]
+![Pasted image 20230312114222.png](attachments/Pasted%20image%2020230312114222.png)
 
 I will also create a `Functions` folder under the `TEMPLATES` folder to hold user defined JavaScript functions (we'll go over this in a bit) which similarly extend scripting capabilities but their setup is a bit more involved. This step isn't necessary if you're only wanting to run system commands and have their output returned to the calling note. 
 
 
-![[Pasted image 20230312114606.png]]
-![[Pasted image 20230312114655.png]]
+![Pasted image 20230312114606.png](attachments/Pasted%20image%2020230312114606.png)
+![Pasted image 20230312114655.png](attachments/Pasted%20image%2020230312114655.png)
 
 
 ### Enabling Templater System Commands 
 
 Open Templater's settings menu and set the template folder to the first created folder. In my case it is the `TEMPLATES` folder. This grants Templater access to templates within the folder of our choosing. Tweak the `Timeout` seconds if you think you'll be running commands that will take longer than 5 seconds to return output. 
 
-![[Pasted image 20230312115546.png]]
+![Pasted image 20230312115546.png](attachments/Pasted%20image%2020230312115546.png)
 
-![[Pasted image 20230312115849.png]]
+![Pasted image 20230312115849.png](attachments/Pasted%20image%2020230312115849.png)
 
 > [!Note] Console Differences
 > Windows and \*Nix systems use different shells for command execution. Tweak your `Shell binary location` to match the shell your system is using i.e. `/bin/bash`, `/usr/bin/sh`, `/bin/zsh` etc. For Windows machines this can be left blank. Windows will automatically scan the system $PATH variable to find the shells we define in the next section. 
@@ -71,7 +71,7 @@ We'll be covering option 1 now as it is the easier of the two options. A sample 
 
 In `User System Command Functions` click `Add New User Function` and add the desired function names and command strings for each shell. 
 
-![[Pasted image 20230312124148.png]]
+![Pasted image 20230312124148.png](attachments/Pasted%20image%2020230312124148.png)
 
 Function Name | System Command String | Variable Name 
 --- | --- | --- 
@@ -107,7 +107,7 @@ Now that the template format is understood, we can create new templates mapping 
 - `Execute PowerShell7 Selected Text`
 - `Execute cmd.exe Selected Text`
 
-![[Pasted image 20230312131658.png]]
+![Pasted image 20230312131658.png](attachments/Pasted%20image%2020230312131658.png)
 
 Pate the following into each respective file. Note that the `variable` and `argument` have been augmented to match the functions we created in the beginning of [[#Creating User Functions]]. 
 
@@ -164,7 +164,7 @@ With the 3 template files added to the `TEMPLATES` directory we can now convert 
 4. Click the Templater Icon 
 5. Select the corresponding shell to run the command 
 
-![[ping_example.gif]]
+![ping_example.gif](attachments/ping_example.gif)
 
 Start to see how incredibly powerful this capability is, particularly with ingesting data into our PKMs. I run a substantial number of scripts during penetration testing whose output is eventually copy and paste into Obsidian. This functionality will significantly reduce the overhead by automating data ingestion into Obsidian. We can also execute local scripts in the same manor that might generate markdown formatted output, which in term would automatically format the note to our liking. 
 
@@ -172,15 +172,15 @@ Start to see how incredibly powerful this capability is, particularly with inges
 
 The execution templates can also be mapped to hot keys further reducing overhead. To map one of the shell executions to a hot key open `Templater settings > Template Hotkeys >` and add each shell to the hotkey of choice. 
 
-![[Pasted image 20230312140552.png]]
+![Pasted image 20230312140552.png](attachments/Pasted%20image%2020230312140552.png)
 
 The hotkey can then be configured through the context menu. 
 
-![[Pasted image 20230312140640.png]]
+![Pasted image 20230312140640.png](attachments/Pasted%20image%2020230312140640.png)
 
 Now to execute a system command through PowerShell5, simply highlight the text and press `Ctrl + Shift + 1` to have its output returned to the terminal. 
 
-![[ping_example_hotkey.gif]]
+![ping_example_hotkey.gif](attachments/ping_example_hotkey.gif)
 
 
 ## Appendix 
@@ -189,10 +189,10 @@ Now to execute a system command through PowerShell5, simply highlight the text a
 Documentation on a simple script module can be found on Templater's [Help Page](https://silentvoid13.github.io/Templater/)
 Enable script modules by specifying the module path. In my case its `TEMPLATES/Funtions`. 
 
-![[Pasted image 20230312141836.png]]
+![Pasted image 20230312141836.png](attachments/Pasted%20image%2020230312141836.png)
 To extend a script module to Templater, a script must be placed in the above folder. Script modules must end in `.js`. Obsidian by default doesn't show unknown filetypes. This setting must be changed within `Files & Links`. 
 
-![[Pasted image 20230312142213.png]]
+![Pasted image 20230312142213.png](attachments/Pasted%20image%2020230312142213.png)
 
 
 Open your favorite text editor and paste the following, naming the file `shell.js`.  This won't be possible through Obsidian because it doesn't have a handler for `.js` files. 
@@ -219,6 +219,12 @@ This example supposedly works on Linux based systems but it fails as it is on Wi
 
 To extend the module functionality to Templater, open settings and click the refresh button. The module should then appear in `Detected (x) User Scripts`. 
 
-![[Pasted image 20230312143001.png]]
+![Pasted image 20230312143001.png](attachments/Pasted%20image%2020230312143001.png)
 - this module would then be used by calling `tp.user.shell(<args>)` the same way previous functions were called. 
 
+
+### Resources 
+- https://medium.com/@gareth.stretton/obsidian-do-almost-anything-really-with-system-commands-b496ffd0679c 
+- https://github.com/djjoa/Obsidian-System-Commands-Execution-Templates
+- https://silentvoid13.github.io/Templater/user-functions/script-user-functions.html
+- https://silentvoid13.github.io/Templater/introduction.html
